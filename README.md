@@ -33,14 +33,14 @@ npm install
 
 Review Contract Files:
 
-MedicalDataAccess.sol: The core smart contract logic.
+**MedicalDataAccess.sol**: The core smart contract logic.
 
 hardhat.config.cjs: Defines compiler settings and network configuration.
 
 deploy.cjs: The script used to deploy the contract to Sepolia.
 
-B. Frontend Environment Setup
-Install Python Packages: Install the required libraries, including web3, python-dotenv, and streamlit:
+**B. Frontend Environment Setup**
+Install Python Packages: Install the required libraries, including web3 for interacting with blockcain, python-dotenv for the secure reading of the .env file, and streamlit for the interface:
 
 Bash
 
@@ -55,7 +55,7 @@ Variable	Example Value	Description
 ALCHEMY_RPC	https://eth-sepolia.g.alchemy.com/v2/...	Your personal Sepolia RPC URL for connecting to the network.
 CONTRACT_ADDRESS	0x123...	The public address of the contract you deployed on Sepolia.
 SENDER_ADDRESS	0xAbC...	The public address of the wallet that signs transactions (the Patient's wallet in this demo).
-PRIVATE_KEY	[YOUR 64-CHARACTER PRIVATE KEY]	CRITICAL: The private key corresponding to the SENDER_ADDRESS, used to pay gas and sign transactions.
+PRIVATE_KEY	[YOUR 64-CHARACTER PRIVATE KEY]	CRITICAL: The private key corresponding to the SENDER_ADDRESS, used to pay gas and sign transactions. Since it was done on the sepolia testnet, you can use sepolia faucet and just give yourself a bunch of fake eth
 
 5. How to Run and Demonstrate the Application
 The main application is split across two Streamlit files: the connector and the UI logic.
@@ -64,7 +64,7 @@ Execute the Application: Run the application from your terminal:
 
 Bash
 
-streamlit run connect_contract.py
+streamlit run blockchainapp.py
 Demonstration Steps:
 
 Step	Role	Action	Verification

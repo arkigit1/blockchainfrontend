@@ -1,0 +1,19 @@
+Rename this file to .env before running the application
+
+1. Your Alchemy/Infura node URL for the Sepolia network
+
+ALCHEMY_RPC="[YOUR_SEPOLIA_RPC_URL_HERE]"
+
+2. The address of the contract YOU deployed on Sepolia
+
+CONTRACT_ADDRESS="[0x9637fc9Fc7445d91553971B7A24f63bc87A70eB8]"
+
+3. The public address of the wallet used to send transactions (e.g., your MetaMask public key)
+
+SENDER_ADDRESS="[0x4197d3AC950A9Bafec2A77EE04CceBC457faA638]"
+
+4. The PRIVATE KEY corresponding to the SENDER_ADDRESS (USED FOR SIGNING TRANSACTIONS)
+
+WARNING: NEVER COMMIT YOUR REAL PRIVATE KEY TO GITHUB!
+
+PRIVATE_KEY="[YOUR_WALLET_PRIVATE_KEY_HERE]"

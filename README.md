@@ -74,7 +74,7 @@ Step	Role	Action	Verification
 
 **6. Key Files for Review**
 File Name	Functional Role
-blockchainapp.py	Contains the core Streamlit UI components, state management, and the send_transaction wrapper function.
-connect_contract.py	The Main Entry Point that handles web3 setup, ABI loading, and contract instance initialization.
+blockchainapp.py	Contains the core Streamlit UI components, state management, and the send_transaction wrapper function. (**This file imports the w3 and contract objects from connect_contract.py).**
+connect_contract.py	 handles web3 setup, ABI loading, and contract instance initialization.
 MedicalDataAccess.sol	The complete Solidity source code for the governance contract.
 contract_abi.json	The JSON interface required for web3.py to correctly call the contract functions.

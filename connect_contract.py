@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-
+'''This file is the connection and itialisation layer of the app. its role is to set up the necessary blockchain interfaces once before the 
+main logic in blockchain app'''
 Created on Tue Oct 14 07:42:31 2025
 @author: arkij
 """
@@ -10,7 +11,7 @@ import json
 import os
 from dotenv import load_dotenv
 
-# Load environment variables
+# Load environment variables from the .env folder
 load_dotenv()
 
 ALCHEMY_RPC = os.getenv("ALCHEMY_RPC")
@@ -32,3 +33,4 @@ with open(abi_path, "r") as f:
 contract = w3.eth.contract(address=Web3.to_checksum_address(CONTRACT_ADDRESS), abi=abi)
 print("Contract loaded successfully!")
 print("Available functions:", [fn for fn in contract.functions])
+

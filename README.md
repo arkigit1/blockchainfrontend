@@ -52,7 +52,7 @@ Before running the application, you must create a configuration file named .env 
 Create the .env file and fill it out using the template below:
 
 Variable	Example Value	Description
-ALCHEMY_RPC	https://eth-sepolia.g.alchemy.com/v2/...	Your personal Sepolia RPC URL for connecting to the network.
+ALCHEMY_RPC	https://eth-sepolia.g.alchemy.com/v2/...	**REQUIRED, it will NOT work without:** Your personal Sepolia RPC URL. This must be generated from a free service like Alchemy or Infura to allow your Python script to connect to the Ethereum network.
 CONTRACT_ADDRESS	0x123...	The public address of the contract you deployed on Sepolia.
 SENDER_ADDRESS	0xAbC...	The public address of the wallet that signs transactions (the Patient's wallet in this demo).
 PRIVATE_KEY	[YOUR 64-CHARACTER PRIVATE KEY]	CRITICAL: The private key corresponding to the SENDER_ADDRESS, used to pay gas and sign transactions. Since it was done on the sepolia testnet, you can use sepolia faucet and just give yourself a bunch of fake eth

@@ -57,14 +57,22 @@ CONTRACT_ADDRESS	0x123...	The public address of the contract you deployed on Sep
 SENDER_ADDRESS	0xAbC...	The public address of the wallet that signs transactions (the Patient's wallet in this demo).
 PRIVATE_KEY	[YOUR 64-CHARACTER PRIVATE KEY]	CRITICAL: The private key corresponding to the SENDER_ADDRESS, used to pay gas and sign transactions. Since it was done on the sepolia testnet, you can use sepolia faucet and just give yourself a bunch of fake eth
 
-5. How to Run and Demonstrate the Application
+**5. How to Run and Demonstrate the Application**
 The main application is split across two Streamlit files: the connector and the UI logic.
 
 Execute the Application: Run the application from your terminal:
 
-Bash
+in Anaconda Prompt 
+# If using Conda:
+conda activate blockchain
 
+# OR, if using a standard Python virtual environment:
+source .venv/bin/activate
+
+conda activate blockchain
+cd "path to your file"
 streamlit run blockchainapp.py
+
 Demonstration Steps:
 
 Step	Role	Action	Verification
@@ -76,5 +84,5 @@ Step	Role	Action	Verification
 File Name	Functional Role
 blockchainapp.py	Contains the core Streamlit UI components, state management, and the send_transaction wrapper function. (**This file imports the w3 and contract objects from connect_contract.py).**
 connect_contract.py	 handles web3 setup, ABI loading, and contract instance initialization.
-MedicalDataAccess.sol	The complete Solidity source code for the governance contract.
+MedicalDataAccess.sol	The complete Solidity source code for the smart contract.
 contract_abi.json	The JSON interface required for web3.py to correctly call the contract functions.

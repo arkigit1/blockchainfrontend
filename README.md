@@ -5,7 +5,7 @@ The system operates across three layers:
 **Contract Layer (Solidity):** The MedicalDataAccess.sol contract acts as an immutable ledger, storing who owns the data (the Patient) and what permissions have been granted (the Provider's address and an expiration timestamp for specific data sections).
 
 
-**Connection Layer (Python web3.py)**: The Python code uses the web3.py library and the contract_abi.json to communicate with the deployed contract on Sepolia.
+**Connection Layer / connect_contract.py(Python web3.py)**: The Python code uses the web3.py library and the contract_abi.json to communicate with the deployed contract on Sepolia.
 
 **Application Layer (Streamlit):** The frontend provides two dashboards, one for write, and one for read operations 
 

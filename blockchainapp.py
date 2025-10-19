@@ -47,7 +47,7 @@ st.set_page_config(page_title="Patient Data Governance", layout="wide")
 st.title("Patient Data Governance on Blockchain")
 
 #this part defines a list which shows some patient data the patients can grant access too their provider for
-sections = ["Personal Information", "Blood Results", "Imaging", "Medications"]
+sections = ["PatientInfo", "BloodTests", "Imaging", "Medications"]
 
 #Session state is how Streamlit remembers variable values between user interactions (like clicking a button). 
 #This initializes an empty list called tx_log to track all transactions made during the current session.
@@ -174,7 +174,7 @@ elif role == "Provider": #the provider side dashboard!
 
         try:
             try:
-                contract.functions.viewPatientInfo(patient_address).call() #a gas-free read only call to the smart contract. gas-free functions should be in all blockchain based webfaces to stop overconsumption of gas 
+                contract.functions.viewPatientInfo(patient_address).call({'from': provider_wallet}) #a gas-free read only call to the smart contract. gas-free functions should be in all blockchain based webfaces to stop overconsumption of gas 
             except Exception as e:
                 msg_placeholder.error("Failed: Patient record is not registered on the contract. You must register the patient first.") # this will revert if the patient hasnt already been registered 
                 st.stop()

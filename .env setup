@@ -6,7 +6,7 @@ ALCHEMY_RPC="[YOUR_SEPOLIA_RPC_URL_HERE]"
 
 2. The address of the contract 
 
-CONTRACT_ADDRESS="[0x9637fc9Fc7445d91553971B7A24f63bc87A70eB8]"
+CONTRACT_ADDRESS="[0xD9a64A03F15325B1a1De86eF3E41187CB7a226C5]"
 
 3. The public address of the wallet used to send transactions 
 

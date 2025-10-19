@@ -80,7 +80,7 @@ streamlit run blockchainapp.py
 Demonstration Steps:
 
 Steps
-1. Register	Patient:	Fill out all personal data fields and click "Register Patient."	A Transaction Hash will appear, confirming the patient record was written to the smart contract.
+1. Register	Patient:	Fill out all personal data fields and click "Register Patient."	A Transaction Hash will appear, confirming the patient record was written to the smart contract. streamlit is a litte sensitive, so make sure u actually fill out all sections properly
 2. Grant Access: Enter a Provider Address (any metamask wallet will do) and select sections. Click "Grant Access."	A separate transaction Hash will appear for each section, writing the permission to the blockchain.
 3. Check Provider's access:	Switch roles. Enter the Patient's Address (the sender address) and the Provider's Address (hwichever wallet you just gave permissions to). Click "Check Access."	A table will display the granted sections with a Yes status and the expiration time (set to 1 hour).
 
@@ -90,3 +90,7 @@ blockchainapp.py	Contains the core Streamlit UI components, state management, an
 connect_contract.py	 handles web3 setup, ABI loading, and contract instance initialization.
 MedicalDataAccess.sol	The complete Solidity source code for the smart contract.
 contract_abi.json	The JSON interface required for web3.py to correctly call the contract functions.
+
+note: THIS IS A PROOF OF CONCEPT DEMO!! to actually "make more patients", the env file needs another private key, and a sender address. in a fully fleshed out 
+version, a login portal would be a place for those highly sensitive details to be drawn from, enabling a full login portal experience. for the 
+purpose of this assignment, i didnt develop it this far
